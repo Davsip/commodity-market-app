@@ -1,0 +1,60 @@
+body {
+    background: white;
+    padding: auto;
+}
+
+
+
+.navi-bar {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* border-bottom:2px dotted #000; */
+    height: 90px;
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+    
+}
+
+
+
+/*   make background transparent */
+ul {
+    list-style-type: none;
+    width: 50%;
+    height: 80px;
+    margin:auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ec860a;
+   
+   
+}
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+li a:hover {
+    background-color: black;
+}
+
+.img-1{
+
+    padding-left:   395px;
+
+}
+.img-2 {
+    padding-right: 150px;
+}
