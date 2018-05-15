@@ -58,3 +58,26 @@ li a:hover {
 .img-2 {
     padding-right: 150px;
 }
+
+/* main-> page  */ 
+
+.icons-1 {
+padding-left: 200px;  
+}
+
+.icons-2 {
+    padding-rigth: 80px;  
+    }
+
+.input-home{
+    margin-left: 300px;
+    padding: auto;
+}
+/* energy-> page  *;/ 
+
+/* title   */ 
+
+.energy-header {
+    text-align: center;
+
+}
