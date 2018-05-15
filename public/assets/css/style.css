@@ -17,19 +17,15 @@ body {
     
 }
 
-
-
 /*   make background transparent */
 ul {
     list-style-type: none;
-    width: 50%;
+    width: 100%;
     height: 80px;
     margin:auto;
     padding: 0;
     overflow: hidden;
-    background-color: #ec860a;
-   
-   
+    background-color: #ec860a; 
 }
 
 
@@ -66,13 +62,9 @@ padding-left: 200px;
 }
 
 .icons-2 {
-    padding-rigth: 80px;  
+    padding-rigth:80px;  
     }
 
-.input-home{
-    margin-left: 300px;
-    padding: auto;
-}
 /* energy-> page  *;/ 
 
 /* title   */ 
@@ -81,3 +73,5 @@ padding-left: 200px;
     text-align: center;
 
 }
+
+/*  talble */
