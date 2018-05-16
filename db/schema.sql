@@ -1,8 +1,8 @@
-CREATE DATABASE commodities_db 
-USE commodities_db 
+drop database if exists  commodities_db;
+CREATE DATABASE commodities_db;
 
+USE commodities_db;
 
-CREATE DATABASE commodities_db ;
 CREATE TABLE gold 
 (
  
