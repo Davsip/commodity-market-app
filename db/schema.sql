@@ -6,12 +6,13 @@ USE commodities_db;
 CREATE TABLE gold 
 (
  
-     id int not null AUTO_INCREMENT, 
-     Price decimal (5,2) not null, 
-     Daily_change decimal(5,2) not null, 
-     Opened decimal(5,2) not null, 
-     Daily_High decimal (5,2) not null,
-     Daily_Low decimal (5,2) not null, 
+    id int not null AUTO_INCREMENT, 
+     Price decimal (6,2) not null, 
+     Daily_change decimal(6,2) not null, 
+     Opened decimal(6,2) not null, 
+     Daily_High decimal (6,2) not null,
+     Daily_Low decimal (6,2) not null, 
+     Contract_price decimal(6,2)not null,
      PRIMARY KEY (ID) 
          
 
@@ -26,7 +27,8 @@ CREATE TABLE silver
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
-     PRIMARY KEY (ID)    
+     Contract_price decimal(5,2)not null,
+     PRIMARY KEY (ID)   
 
 ) ;
 
@@ -40,6 +42,7 @@ CREATE TABLE crude_oil
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
@@ -53,20 +56,21 @@ CREATE TABLE  natural_gas
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
-     
 ) ;
 
 
 CREATE TABLE corn 
 (
  
-     id int not null AUTO_INCREMENT, 
+    id int not null AUTO_INCREMENT, 
      Price decimal (5,2) not null, 
      Daily_change decimal(5,2) not null, 
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
@@ -80,6 +84,7 @@ CREATE TABLE soybean
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
