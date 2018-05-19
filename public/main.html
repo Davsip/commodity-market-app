@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-           <link rel="stylesheet" href="./assets/css/style.css">
-            <title>D1</title>
-             </head>
-             <body>
-             <header class="navi-bar">
-           <h1>COMMODITY MARKET</h1> 
-        </header>   
-        <br>
-<!--- nav bar links    -->
-          <ul class="group"> 
-            <li class="tab "> <h3> <a class="hover-link link tab__link selected hover-link_open" href="main.html"> Overview </a> 
-               </h3> </li> 
-                <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="energy.html"> Energy </a> </h3> </li>  
-                  <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="metals.html"> Metals </a> </h3> </li>
-                    <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="agriculture.html"> Agriculture </a> </h3> </li> 
-                      </ul>
-                       <br>
-                        <h2 class="main-header"> Overview</h2> 
-                          <br>
-                           <br>
-                           <br>
-<!-- main page icon images   -->
-                       <div class="icons-1">
-                     <div class="container">
-                   <div class="col-md-10">
-                 <a href="corn.html"><img src="./assets/img/corn.png" class="img-1"></a>
-                <a href="URL"><img src="./assets/img/oil.png"></a>
-               <a href="URL"><img src="./assets/img/gold.png" class="img-3"></a>
-            <a href="energy.html#natGas"><img src="./assets/img/natural-gas.png" class="img-4"></a>
-           </div>  
-         </div> 
-     </div> 
-<!--Input information-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>D1</title>
+</head>
+<body>
+  <header class="navi-bar">
+    <h1>COMMODITY MARKET</h1> 
+  </header>   
   <br>
-     <br>
-         <br>
-            <div class="input-home">
-               <div class="container">
-                <div class="col-md-12">
-                <form>
-                 <div>
-                    <br>
-                    <label for="uname"><h3>What's  your capital for investent?:</h3> </label>
-                      <input type="text" id="uname" name="name">        
-                         <br>
-                        <label for="uname"><h3>How much would you invest?:</h3> </label>
-                        <input type="text" id="uname" name="name">       
-                            <div>
-                             <button>Submit</button>
-                            </div>
-                         </form>
-                     </div>
-                    </div>
-                </div>
+<!--- nav bar links    -->
+  <ul class="group">
+    <li class="tab "><h3> <a class="hover-link link tab__link selected hover-link_open" href="/"> Overview </a> </h3> </li>
+    <li class="tab "><h3> <a class="hover-link link tab__link  hover-link_open" href="/energy"> Energy </a> </h3> </li>
+    <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="/metals"> Metals </a> </h3> </li>
+    <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="/agriculture"> Agriculture </a> </h3> </li>
+  </ul>
+  <br>
+  <h2 class="main-header"> Overview</h2>
+  <br> <br> <br>
+<!-- main page icon images   -->
+  <div class="icons-1">
+    <div class="container">
+      <div class="col-md-10">
+        <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
+        <a href="#"><img src="./assets/img/oil.png" class='img-2'></a>
+        <a href="#"><img src="./assets/img/gold.png" class="img-3"></a>
+        <a href="#"><img src="./assets/img/natural-gas.png" class="img-4"></a>
+      </div>  
+    </div> 
+  </div> 
 
-
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-xs-12">
+        <br><br><br>
+        <div>
+          <p>This form pings the /api/someFormRoute api route. Check your console!</p>
+          <form action="/api/someFormRoute" method='POST'>
+            <input type="text" placeholder='What is your name?'>
+            <input type="text" placeholder='What is your quest?'>
+            <button>Form Submit</button>
+          </form>
+        </div>
+        <br><br><br>
+        <div>
+          <p>This button pings the /api/getSomeData api route. Check your console!</p>
+          <a href='/api/getSomeData'><button>Click Me!</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--Input information-->
+  <br> <br> <br>
+  <div class="input-home">
+    <div class="container">
+      <div class="col-md-12">
+        <form>
+          <div>
+            <br>
+            <label for="uname"><h3>What's  your capital for investent?:</h3> </label>
+            <input type="text" id="uname" name="name">        
+            <br>
+            <label for="uname"><h3>How much would you invest?:</h3> </label>
+            <input type="text" id="uname" name="name">       
+            <div>
+              <button>Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
