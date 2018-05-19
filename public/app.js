@@ -13,7 +13,7 @@ new TradingView.widget(
     "locale": "en",
     "toolbar_bg": "#f1f3f6",
     "enable_publishing":false,
-    "withdateranges": true,
+    "withdateranges": false,
     "hide_side_toolbar": false,
     "allow_symbol_change": true,
     "details": true,
@@ -30,6 +30,5 @@ new TradingView.widget(
     );
 
 
-    
  
-  
+    
