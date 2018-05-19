@@ -5,35 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>D1</title>
 </head>
 <body>
   <header class="navi-bar">
-    <h1>COMMODITY MARKET</h1> 
+    <h1><span class="logo-char">C</span>OMMODITY <span class="logo-char">M</span>ARKET <span class="fa fa-bar-chart"></span></h1>
   </header>   
-  <br>
-<!--- nav bar links    -->
-  <ul class="group">
-    <li class="tab "><h3> <a class="hover-link link tab__link selected hover-link_open" href="/"> Overview </a> </h3> </li>
-    <li class="tab "><h3> <a class="hover-link link tab__link  hover-link_open" href="/energy"> Energy </a> </h3> </li>
-    <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="/metals"> Metals </a> </h3> </li>
-    <li class="tab "> <h3> <a class="hover-link link tab__link  hover-link_open" href="/agriculture"> Agriculture </a> </h3> </li>
+  <!-- <br> -->
+<!-- nav bar links -->
+  <!--  Hiding original nav bar -->
+   <!--
+      <ul class="group">
+    <li class="tab "><h4> <a class="hover-link link tab__link selected hover-link_open" href="/"> Overview </a> </h4> </li>
+    <li class="tab "><h4> <a class="hover-link link tab__link  hover-link_open" href="/energy"> Energy </a> </h4> </li>
+    <li class="tab "> <h4> <a class="hover-link link tab__link  hover-link_open" href="/metals"> Metals </a></h4> </li>
+    <li class="tab "> <h4> <a class="hover-link link tab__link  hover-link_open" href="/agriculture"> Agriculture </a> </h4> </li>
   </ul>
+-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/"><b>Overview</b></a></li>
+      <li><a href="/energy"><b>Energy</b></a></li>
+      <li><a href="/metals"><b>Metals</b></a></li>
+      <li><a href=/agriculture><b>Agriculture</b></a></li>
+    </ul>
+  </div>
+</nav>
   <br>
-  <h2 class="main-header"> Overview</h2>
-  <br> <br> <br>
+  <!-- <h2 class="main-header"> Overview</h2>
+  <h2><span class="label label-default">Overview</span></h2>
+  <br> <br> <br> -->
+  <div class="jumbotron">
+    <h1>Overview</h1>
+    <p>Lorem ipsum dolor sit amet, pri alia hinc etiam ad. Sit te amet ridens nostrum, sed mollis denique repudiare ne. Eum an meis patrioque, graece legendos ea ius, soleat moderatius an per. Cum ad commodo legendos, eu quidam copiosae gloriatur vim.
+      <div class="icons-1">
+        <div class="container">  
+            <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
+            <a href="#"><img src="./assets/img/oil.png" class='img-2'></a>
+            <a href="#"><img src="./assets/img/gold.png" class="img-3"></a>
+            <a href="#"><img src="./assets/img/natural-gas.png" class="img-4"></a>           
+        </div> 
+      </div> 
+    </p>
+    <p><a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
 <!-- main page icon images   -->
-  <div class="icons-1">
-    <div class="container">
-      <div class="col-md-10">
-        <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
-        <a href="#"><img src="./assets/img/oil.png" class='img-2'></a>
-        <a href="#"><img src="./assets/img/gold.png" class="img-3"></a>
-        <a href="#"><img src="./assets/img/natural-gas.png" class="img-4"></a>
-      </div>  
-    </div> 
-  </div> 
+
+
+<!-- Hiding test data-->
+<!-- 
+  <div class="container text-center">
 
   <div class="container">
     <div class="row">
@@ -42,6 +66,9 @@
       </div>
     </div>
   </div>
+
+  -->
+
   <div>
     <p>This form pings the /api/someFormRoute api route. Check your console!</p>
     <form action="/api/someFormRoute" method='POST'>
@@ -56,9 +83,13 @@
     <a href='/api/getSomeData'><button>Click Me!</button></a>
   </div>
 
+
 <!--Input information-->
   <br> <br> <br>
+  <!-- Hiding original form -->
+    <!-- 
   <div class="input-home">
+
     <div class="container">
       <div class="col-md-12">
         <form>
@@ -76,6 +107,26 @@
         </form>
       </div>
     </div>
-  </div>
+     </div>
+  -->
+  <div class="container">
+      <h2>Investment Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">What's  your capital for investent?:</label>
+          <input type="email" class="form-control" id="email" placeholder="Capital investment">
+        </div>
+        <div class="form-group">
+          <label for="pwd">How much would you invest?:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Amount to invest">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <br>
+    <br>
+
+ <div class="footer">&copy; Copyright 2018</div>
+  
 </body>
 </html>
