@@ -1,32 +1,43 @@
 body {
     background: white;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#fff)) fixed;
     padding: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
+.logo-char  {
+ font-size: 60px;
+ color: #747474;
 
-
+}
 .navi-bar {
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    /* border-bottom:2px dotted #000; */
-    height: 90px;
-    background-color: black;
-    text-align: center;
-    color: whitesmoke;
-    
+ /* border-radius: 20px; */
+  background: #333;
+  padding: 5px 5px 5px 0px; 
+  width: 100%;
+  height: 65px; 
+  position: relative;
+  /*overflow: hidden; */
+  box-sizing: border-box;
+   border-bottom:1px solid #000; 
+  height: 90px;
+   /* background-color: black; */
+  text-align: center;
+  text-shadow: 2px 2px 2px #1d1d1d;  
+ /* box-shadow: 0px 3px 2px #1d1d1d;  */
+  color: #bfbebe;   
 }
 
 ul {
     list-style-type: none;
     width: 100%;
-    height: 80px;
+   /* height: 40px;*/
     margin:auto;
-    padding: 0;
+   /* padding: -10px 1px 1px 1px; */ 
     overflow: hidden;
-    background-color: #ec860a; 
+  /*  box-shadow: 0px 1px 2px #ababab; */
+   /* background-color: #ec860a;  */
 }
 
 
@@ -38,14 +49,21 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 5px 20px 20px 20px;
     text-decoration: none;
     margin-left: 50px;
 }
 
 li a:hover {
-    background-color: black;
+    background-color: #965a00;
 }
+
+/*
+.nav navbar-nav  {
+  height: 10px;
+  border:1px solid red;
+}
+*/
 
 .img-1{
 
@@ -59,8 +77,17 @@ li a:hover {
 /* main-> page  */ 
 
 .icons-1 {
-padding-left: 80px;
-padding-right: -20px;
+/* padding-left: 80px;
+padding-right: -20px; */
+text-align: center;
+/* padding: 0px 5px 0px 5px; */
+}
+
+.jumbotron {
+  width: 80%;
+  padding: 40px;
+  margin: auto;
+
 }
 
 .input-home {
@@ -84,10 +111,6 @@ margin-left: 30px;
 }
 
 /*  talble */
-
-
-
-  
   input.question,
   textarea.question {
     font-size: 48px;
@@ -208,3 +231,12 @@ margin-left: 30px;
     }
   }
   
+  .footer {
+    background-color: #ec860a;
+    border-top: 1px solid #b86500;
+    color: #efefef;
+    text-align: center;
+    height: 40px;
+    padding: 10px 0 0 0;
+    vertical-align: center;
+}
