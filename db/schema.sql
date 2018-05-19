@@ -3,21 +3,43 @@ CREATE DATABASE commodities_db;
 
 USE commodities_db;
 
-CREATE TABLE gold 
+CREATE TABLE Gold 
 (
  
-     id int not null AUTO_INCREMENT, 
-     Price decimal (5,2) not null, 
-     Daily_change decimal(5,2) not null, 
-     Opened decimal(5,2) not null, 
-     Daily_High decimal (5,2) not null,
-     Daily_Low decimal (5,2) not null, 
+    id int not null AUTO_INCREMENT, 
+     Price decimal (6,2) not null, 
+     Daily_change decimal(6,2) not null, 
+     Opened decimal(6,2) not null, 
+     Daily_High decimal (6,2) not null,
+     Daily_Low decimal (6,2) not null, 
+     buy_at decimal (6,2)not null,
+     sell_at decimal (6,2)not null,
+     stop_at decimal (6,2)not null,
+     Contract_price decimal(6,2)not null,
+      
      PRIMARY KEY (ID) 
          
+) ;
+
+CREATE TABLE Silver
+(
+ 
+     id int not null AUTO_INCREMENT, 
+     Price decimal (5,2) not null, 
+     Daily_change decimal(5,2) not null, 
+     Opened decimal(5,2) not null, 
+     Daily_High decimal (5,2) not null,
+     Daily_Low decimal (5,2) not null,
+	Buy_at decimal (6,2)not null,
+     Sell_at decimal (6,2)not null,
+     Stop_at decimal (6,2)not null,
+     Contract_price decimal(5,2)not null,
+     PRIMARY KEY (ID)   
 
 ) ;
 
-CREATE TABLE silver
+
+CREATE TABLE Crude_oil 
 (
  
      id int not null AUTO_INCREMENT, 
@@ -26,25 +48,15 @@ CREATE TABLE silver
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
-     PRIMARY KEY (ID)    
-
-) ;
-
-
-CREATE TABLE crude_oil 
-(
- 
-     id int not null AUTO_INCREMENT, 
-     Price decimal (5,2) not null, 
-     Daily_change decimal(5,2) not null, 
-     Opened decimal(5,2) not null, 
-     Daily_High decimal (5,2) not null,
-     Daily_Low decimal (5,2) not null, 
+      Buy_at decimal (6,2)not null,
+     Sell_at decimal (6,2)not null,
+     Stop_at decimal (6,2)not null,
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
 
-CREATE TABLE  natural_gas 
+CREATE TABLE  Natural_gas 
 (
  
      id int not null AUTO_INCREMENT, 
@@ -53,12 +65,32 @@ CREATE TABLE  natural_gas
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
+     Buy_at decimal (6,2)not null,
+     Sell_at decimal (6,2)not null,
+     Stop_at decimal (6,2)not null,
+     Contract_price decimal(5,2)not null,
+     PRIMARY KEY (ID) 
+) ;
+
+
+CREATE TABLE Corn 
+(
+ 
+    id int not null AUTO_INCREMENT, 
+     Price decimal (5,2) not null, 
+     Daily_change decimal(5,2) not null, 
+     Opened decimal(5,2) not null, 
+     Daily_High decimal (5,2) not null,
+     Daily_Low decimal (5,2) not null, 
+     Buy_at decimal (6,2)not null,
+     Sell_at decimal (6,2)not null,
+     Stop_at decimal (6,2)not null,
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
 
-
-CREATE TABLE corn 
+CREATE TABLE Soybean
 (
  
      id int not null AUTO_INCREMENT, 
@@ -67,19 +99,10 @@ CREATE TABLE corn
      Opened decimal(5,2) not null, 
      Daily_High decimal (5,2) not null,
      Daily_Low decimal (5,2) not null, 
-     PRIMARY KEY (ID) 
-     
-) ;
-
-CREATE TABLE soybean
-(
- 
-     id int not null AUTO_INCREMENT, 
-     Price decimal (5,2) not null, 
-     Daily_change decimal(5,2) not null, 
-     Opened decimal(5,2) not null, 
-     Daily_High decimal (5,2) not null,
-     Daily_Low decimal (5,2) not null, 
+     Buy_at decimal (6,2)not null,
+     Sell_at decimal (6,2)not null,
+     Stop_at decimal (6,2)not null,
+     Contract_price decimal(5,2)not null,
      PRIMARY KEY (ID) 
      
 ) ;
