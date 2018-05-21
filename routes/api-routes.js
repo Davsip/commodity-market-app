@@ -1,5 +1,5 @@
 var path = require('path')
-
+var connection = require(connection);
 module.exports = function (app){
     app.post("/api/someFormRoute", function(req, res){
         console.log('/api/someFormRoute route was pinged!')
@@ -12,8 +12,11 @@ module.exports = function (app){
             job: 'Developer',
             favorite_song: 'Happy Birthday'
         }
-        console.log('/api/getSomeData was pinged!')
-        console.log('Here, have some data: ')
-        console.log(jsonData)
+        
+        connection.query('SELECT * from gold', function (error, results, fields) {
+            if (error) throw error;
+            console.log('The solution is: ', results[0].solution);
+        res.json(jsonData);
+        connection.end();
     })
-}
+    }

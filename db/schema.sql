@@ -16,7 +16,7 @@ CREATE TABLE Gold
      sell_at decimal (6,2)not null,
      stop_at decimal (6,2)not null,
      Contract_price decimal(6,2)not null,
-      
+     Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID) 
          
 ) ;
@@ -34,6 +34,7 @@ CREATE TABLE Silver
      Sell_at decimal (6,2)not null,
      Stop_at decimal (6,2)not null,
      Contract_price decimal(5,2)not null,
+     Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID)   
 
 ) ;
@@ -52,6 +53,7 @@ CREATE TABLE Crude_oil
      Sell_at decimal (6,2)not null,
      Stop_at decimal (6,2)not null,
      Contract_price decimal(5,2)not null,
+     Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID) 
      
 ) ;
@@ -69,6 +71,7 @@ CREATE TABLE  Natural_gas
      Sell_at decimal (6,2)not null,
      Stop_at decimal (6,2)not null,
      Contract_price decimal(5,2)not null,
+	 Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID) 
 ) ;
 
@@ -86,6 +89,7 @@ CREATE TABLE Corn
      Sell_at decimal (6,2)not null,
      Stop_at decimal (6,2)not null,
      Contract_price decimal(5,2)not null,
+	 Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID) 
      
 ) ;
@@ -103,6 +107,7 @@ CREATE TABLE Soybean
      Sell_at decimal (6,2)not null,
      Stop_at decimal (6,2)not null,
      Contract_price decimal(5,2)not null,
+	  Investment_strategy  varchar (200) not null,
      PRIMARY KEY (ID) 
      
 ) ;
