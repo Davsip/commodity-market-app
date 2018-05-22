@@ -24,8 +24,15 @@ body {
    /* background-color: black; */
   text-align: center;
   text-shadow: 2px 2px 2px #1d1d1d;  
- /* box-shadow: 0px 3px 2px #1d1d1d;  */
   color: #bfbebe;   
+}
+
+/* Gradient transparent - color - transparent */
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 ul {
@@ -83,7 +90,7 @@ text-align: center;
 }
 
 .jumbotron {
-  width: 80%;
+  width: 90%;
   padding: 40px;
   margin: auto;
 
@@ -109,8 +116,25 @@ padding-left: 180px;
   float: left;
 }
 
+.main-header  {
+  margin-left: 30px;
+}
 
+.container {
+  padding: 8px;
+}
 
+.sub-header  {
+  margin-left: 30px;
+  color: #888888
+}
+
+.col-md-5  {
+}
+
+.col-md-7  {
+  padding: 180px 0 0 60px;
+}
 
 /*  talble */
   input.question,
