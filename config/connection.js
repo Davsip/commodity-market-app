@@ -9,7 +9,7 @@ else {
 
   host: "localhost",
   user: "root",
-  password: "central1889",   ///  <------------------------------- enter password 
+  password: "",   ///  <------------------------------- enter password 
   database: "commodities_db"  // <----------------- check database 
 });
 }
