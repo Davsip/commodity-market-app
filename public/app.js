@@ -19,9 +19,9 @@ new TradingView.widget(
     "details": true,
     "hotlist": true,
     "calendar": true,
-    // "news": [
-    //   "headlines"
-    // ],
+    "news": [
+      "headlines"
+    ],
     "studies": [
       "MAExp@tv-basicstudies"
     ],
