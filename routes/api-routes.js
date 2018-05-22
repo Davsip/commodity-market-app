@@ -1,5 +1,5 @@
 var path = require('path')
-var connection = require(connection);
+var connection = require('../config/connection.js');
 module.exports = function (app){
     app.post("/api/someFormRoute", function(req, res){
         console.log('/api/someFormRoute route was pinged!')
@@ -19,4 +19,5 @@ module.exports = function (app){
         res.json(jsonData);
         connection.end();
     })
-    }
+    })
+};
