@@ -38,77 +38,86 @@
   <!-- <h2 class="main-header"> Overview</h2>
   <h2><span class="label label-default">Overview</span></h2>
   <br> <br> <br> -->
-  <div class="jumbotron">
-    <h1>Overview</h1>
-    <p>A commodity market is a market that trades in primary economic sectors.Investors access about 50 major commodity markets worldwide with purely financial transactions increasingly outnumbering physical trades in which goods are delivered.This app help the investor lower the risk and invest smartly with good returns.</p>
-      <div class="icons-1">
-        <div class="container">  
-            <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
-            <a href="#"><img src="./assets/img/oil.png" class='img-2'></a>
-            <a href="#"><img src="./assets/img/gold.png" class="img-3"></a>
-            <a href="#"><img src="./assets/img/natural-gas.png" class="img-4"></a>           
-        </div> 
-      </div> 
-    </p>
-    <p><a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a></p>
-  </div>
-<!-- main page icon images   -->
-
-
-<!-- Hiding test data-->
-<!-- 
-  <div class="container text-center">
-
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        
+      <div class="col-lg-8">
+          <div class="jumbotron">
+              <h1>Overview</h1>
+              <p>Lorem ipsum dolor sit amet, pri alia hinc etiam ad. Sit te amet ridens nostrum, sed mollis denique repudiare ne. Eum an meis patrioque, graece legendos ea ius, soleat moderatius an per. Cum ad commodo legendos, eu quidam copiosae gloriatur vim.
+                <div class="icons-1">
+                  <div class="container">  
+                      <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
+                      <a href="#"><img src="./assets/img/oil.png" class='img-2'></a>
+                      <a href="#"><img src="./assets/img/gold.png" class="img-3"></a>
+                      <a href="#"><img src="./assets/img/natural-gas.png" class="img-4"></a>          
+                  </div>
+                </div>
+              </p>
+              <!-- <p><a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a></p> -->
+            </div>
       </div>
+      <div class="col-lg-4">
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/futures/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "width": "400",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(60, 188, 152, 1)",
+  "plotLineColorFalling": "rgba(255, 74, 104, 1)",
+  "gridLineColor": "rgba(233, 233, 234, 1)",
+  "scaleFontColor": "rgba(233, 233, 234, 1)",
+  "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
+  "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
+  "symbolActiveColor": "rgba(242, 250, 254, 1)",
+  "tabs", [
+    {
+      "title": "Commodities",
+      "symbols": [
+        {
+          "s": "TVC:GOLD",
+          "d": "Gold"
+        },
+        {
+          "s": "TVC:SILVER",
+          "d": "Silver"
+        },
+        {
+          "s": "OANDA:CORNUSD",
+          "d": "Corn"
+        },
+        {
+          "s": "FOREXCOM:SOYUSD",
+          "d": "Soybean"
+        },
+        {
+          "s": "OANDA:NATGASUSD",
+          "d": "Natural Gas"
+        },
+        {
+          "s": "TVC:USOIL",
+          "d": "Crude Oil"
+        }
+      ],
+      "originalTitle": "Commodities"
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+      </div>
+      
     </div>
-  </div>
-
-  -->
-
-  <div>
-    <p>This form pings the /api/someFormRoute api route. Check your console!</p>
-    <form action="/api/someFormRoute" method='POST'>
-      <input id= "name" type="text" placeholder='What is your name?'>
-      <input id="goal" type="text" placeholder='What is your quest?'>
-      <button id = "goalSubmit">Form Submit</button>
-    </form>
-  </div>
-  <br><br><br>
-  <div>
-    <p>This button pings the /api/getSomeData api route. Check your console!</p>
-    <a href='./metals.html'><button>Click Me!</button></a>
-  </div>
-
-
+<!-- main page icon images   -->
 <!--Input information-->
   <br> <br> <br>
-  <!-- Hiding original form -->
-    <!-- 
-  <div class="input-home">
-
-    <div class="container">
-      <div class="col-md-12">
-        <form>
-          <div>
-            <br>
-            <label for="uname"><h3>What's  your capital for investent?:</h3> </label>
-            <input type="text" id="uname" name="name">        
-            <br>
-            <label for="uname"><h3>How much would you invest?:</h3> </label>
-            <input type="text" id="uname" name="name">       
-            <div>
-              <button>Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-     </div>
-  -->
   <div class="container">
       <h2>Investment Form</h2>
       <form>
@@ -127,6 +136,5 @@
     <br>
 
  <div class="footer">&copy; Copyright 2018</div>
-  
 </body>
 </html>
