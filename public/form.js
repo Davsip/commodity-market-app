@@ -1,8 +1,20 @@
 //  var database = require ("../config/connection.js")
+$('#goalSubmit').on("submit", function(event) {
+    event.preventDefault();
+    var inputGoalName = $('#name');
+    var inputGoalPlan = $('#goal');
+
+    var newGoal = {
+        name: inputGoalName.val().trim(),
+        plan: inputGoalPlan.val().trim()
+    };
+
+    $.post("/api/goals/", newGoal, function() {
+        alert("Goal Created!");
+    });
+});
 
 
-$("#invest").on('click', function(event){
-event.preventDefault();
 
 $.ajax({
     url: "/api/getSomeData",
@@ -17,7 +29,7 @@ $.ajax({
 });
 
 
-}
 
 
-)
+
+

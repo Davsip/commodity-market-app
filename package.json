@@ -7,7 +7,9 @@
     "bulma": "^0.7.1",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
-    "popmotion": "^8.2.1"
+    "mysql2": "^1.5.3",
+    "popmotion": "^8.2.1",
+    "sequelize": "^4.37.8"
   },
   "devDependencies": {},
   "scripts": {
