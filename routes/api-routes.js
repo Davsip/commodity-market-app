@@ -13,7 +13,7 @@ module.exports = function (app){
           });
       });
     
-    app.get("/api/getSomeData", function(req, res){
+    app.get("/api/main", function(req, res){
         goal.findAll({}).then(function (results){
             res.json(results);
            });
