@@ -7,23 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>D1</title>
+  <title>Commodity Market App</title>
 </head>
 <body>
   <header class="navi-bar">
     <h1><span class="logo-char">C</span>OMMODITY <span class="logo-char">M</span>ARKET <span class="fa fa-bar-chart"></span></h1>
   </header>   
-  <!-- <br> -->
-<!-- nav bar links -->
-  <!--  Hiding original nav bar -->
-   <!--
-      <ul class="group">
-    <li class="tab "><h4> <a class="hover-link link tab__link selected hover-link_open" href="/"> Overview </a> </h4> </li>
-    <li class="tab "><h4> <a class="hover-link link tab__link  hover-link_open" href="/energy"> Energy </a> </h4> </li>
-    <li class="tab "> <h4> <a class="hover-link link tab__link  hover-link_open" href="/metals"> Metals </a></h4> </li>
-    <li class="tab "> <h4> <a class="hover-link link tab__link  hover-link_open" href="/agriculture"> Agriculture </a> </h4> </li>
-  </ul>
--->
+ 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
@@ -35,15 +25,12 @@
   </div>
 </nav>
   <br>
-  <!-- <h2 class="main-header"> Overview</h2>
-  <h2><span class="label label-default">Overview</span></h2>
-  <br> <br> <br> -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
           <div class="jumbotron">
               <h1>Overview</h1>
-              <p>Lorem ipsum dolor sit amet, pri alia hinc etiam ad. Sit te amet ridens nostrum, sed mollis denique repudiare ne. Eum an meis patrioque, graece legendos ea ius, soleat moderatius an per. Cum ad commodo legendos, eu quidam copiosae gloriatur vim.
+              <p>A commodity market is a market that trades in primary economic sectors.Investors access about 50 major commodity markets worldwide with purely financial transactions increasingly outnumbering physical trades in which goods are delivered.This app help the investor lower the risk and invest smartly with good returns.
                 <div class="icons-1">
                   <div class="container">  
                       <a href="#"><img src="./assets/img/corn.png" class="img-1"></a>
@@ -53,7 +40,6 @@
                   </div>
                 </div>
               </p>
-              <!-- <p><a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a></p> -->
             </div>
       </div>
       <div class="col-lg-4">
@@ -75,7 +61,7 @@
   "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
   "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
   "symbolActiveColor": "rgba(242, 250, 254, 1)",
-  "tabs", [
+  "tabs": [
     {
       "title": "Commodities",
       "symbols": [
@@ -111,30 +97,76 @@
   </script>
 </div>
 <!-- TradingView Widget END -->
-
       </div>
       
     </div>
 <!-- main page icon images   -->
 <!--Input information-->
-  <br> <br> <br>
-  <div class="container">
+  <br>   
+  <div class="container-fluid">      
+      <div class="row">
+        <div class="col-sm-3 col-md-6">
       <h2>Investment Form</h2>
       <form>
         <div class="form-group">
           <label for="email">What's  your capital for investent?:</label>
-          <input type="email" class="form-control" id="email" placeholder="Capital investment">
+          <input id="capMoney" type="email" class="form-control" id="dollars" placeholder="Capital investment">
         </div>
         <div class="form-group">
           <label for="pwd">How much would you invest?:</label>
-          <input type="password" class="form-control" id="pwd" placeholder="Amount to invest">
+          <input id="investMoney" type="password" class="form-control" id="dollars2" placeholder="Amount to invest">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <h3>Custom Search</h3>
+        <form>
+          <div class="form-group">
+            <label for="percentage">Daily change percentage:</label>
+            <input id= "percentChange" type="text" class="form-control" id="daily-change-percentage" placeholder="Daily change percentage">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Contract price:</label>
+            <input id= "contractPrice" type="text" class="form-control" id="contract-price" placeholder="Contract price">
+          </div>
+          <div class="form-group">
+              <label for="pwd">Investment strategy:</label>
+              <input id= "investment" type="text" class="form-control" id="investment-strategy" placeholder="Investment strategy">
+            </div>
+        <button id = "submit" type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>
     <br>
-    <br>
-
+    <br clear="all">
  <div class="footer">&copy; Copyright 2018</div>
+  
 </body>
+
+<script type="text/javascript">
+  // GATHERING USER INPUT
+  function runInvestmentQuery(){
+    var currentURL = window.location.origin;
+
+$('#submit').on("click", function(event) {
+    event.preventDefault();
+    var inputCapMoney = $('#capMoney');
+    var inputInvestMoney = $('#investMoney');
+    var inputPercentChange = $('#percentChange');
+    var inputContractPrice = $('#contractPrice');
+    var inputInvestment = $('#investment');
+
+
+
+    $.ajax({ url: currentURL + "api/main", method: "GET"}).then(function(goalData){
+      console.log("URL:" + currentURL + "/api/main")
+
+    })
+  }
+}
+
+runInvestmentQuery();
+
+
+
+</script>
+
 </html>
+
+

@@ -1,5 +1,5 @@
 //  var database = require ("../config/connection.js")
-$('#goalSubmit').on("submit", function(event) {
+$('#Submit').on("click", function(event) {
     event.preventDefault();
     var inputGoalName = $('#name');
     var inputGoalPlan = $('#goal');
@@ -17,7 +17,7 @@ $('#goalSubmit').on("submit", function(event) {
 
 
 $.ajax({
-    url: "/api/getSomeData",
+    url: "/api/main",
     method: "GET"
 }).then(function(response){
     // var dataobject = response.data;
