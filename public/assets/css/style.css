@@ -128,10 +128,11 @@ padding-left: 180px;
   margin-left: 30px;
   color: #888888
 }
-
+/*
 .col-md-5  {
+  border:1px solid red;
 }
-
+*/
 .col-md-7  {
   padding: 180px 0 0 60px;
 }
