@@ -148,41 +148,36 @@ crossorigin=“anonymous”>
  src="https://code.jquery.com/jquery-3.3.1.min.js"
  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
  crossorigin="anonymous"></script>
-</body>
 <script type="text/javascript">
   // GATHERING USER INPUT
-  function runInvestmentQuery(){
+  function attachClickEventHandler(){
     var currentURL = window.location.origin;
 
-$('#submit').on("click", function(event) {  
-    event.preventDefault();
-    console.log("BUTTON CLICKED!")
-    var moneyObj={
+    $('#submit').on("click", function(event) {  
+      event.preventDefault();
+      console.log("BUTTON CLICKED!")
+      var moneyObj = {
+        inputCapMoney: $('#capMoney').val().trim(),
+        inputInvestMoney: $('#investMoney').val().trim(),
+        inputPercentChange: $('#percentChange').val().trim(),
+        inputContractPrice: $('#contractPrice').val().trim(),
+        inputInvestment: $('#investment').val().trim()
+      };
 
-     inputCapMoney = $('#capMoney').val().trim();
-     inputInvestMoney = $('#investMoney').val().trim();
-     inputPercentChange = $('#percentChange').val().trim();
-     inputContractPrice = $('#contractPrice').val().trim();
-     inputInvestment = $('#investment').val().trim();
-    console.log("INPUT CAP MONEY: "+ inputCapMoney)
+      // $.ajax({ url: currentURL + "api/main", method: "GET"}).then(function(goalData){
+      //   console.log("")
+      //   console.log("URL:" + currentURL + "/api/main")
+      // })
 
-      
-    }
+      $.post('/api/goals',moneyObj, function(data){
+        console.log("Here's the results", data);
+      });
+    });
+  }
 
-
-
-    // $.ajax({ url: currentURL + "api/main", method: "GET"}).then(function(goalData){
-    //   console.log("GET FIRED FROM FRONT END!")
-    //   console.log("URL:" + currentURL + "/api/main")
-
-    // })
-    $.get('/api/main',moneyObj, function(data){
-      console.log("GET FIRED ON FRONT END")
-    })
-  })
-}
-
-runInvestmentQuery();
+$(document).ready(function(){
+  attachClickEventHandler();
+});
 
 
 

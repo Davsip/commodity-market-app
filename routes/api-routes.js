@@ -4,7 +4,7 @@ var goal = require("../models/goal.js");
 
 module.exports = function (app){
     app.post("/api/goals", function(req, res) {
-        db.Goal.create({
+        goal.create({
           name: req.body.name,
           plan: req.body.plan
         })
