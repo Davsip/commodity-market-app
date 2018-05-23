@@ -14,6 +14,10 @@ module.exports = function (app){
       });
     
     app.get("/api/main", function(req, res){
+        
+         var inputcap = req.body.inputCap
+        console.log("REQ IS: "+req)
+        console.log("RES ON BACK END : "+ res)
             res.json(results);
            });
         

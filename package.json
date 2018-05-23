@@ -4,6 +4,7 @@
   "description": "commodity-investment app",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bulma": "^0.7.1",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
