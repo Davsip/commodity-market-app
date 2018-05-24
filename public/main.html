@@ -145,9 +145,9 @@ crossorigin=“anonymous”>
     <br clear="all">
  <div class="footer">&copy; Copyright 2018</div>
  <script
- src="https://code.jquery.com/jquery-3.3.1.min.js"
- integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
- crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script type="text/javascript">
   // GATHERING USER INPUT
   function attachClickEventHandler(){
@@ -155,7 +155,6 @@ crossorigin=“anonymous”>
 
     $('#submit').on("click", function(event) {  
       event.preventDefault();
-      console.log("BUTTON CLICKED!")
       var moneyObj = {
         inputCapMoney: $('#capMoney').val().trim(),
         inputInvestMoney: $('#investMoney').val().trim(),
@@ -164,23 +163,15 @@ crossorigin=“anonymous”>
         inputInvestment: $('#investment').val().trim()
       };
 
-      // $.ajax({ url: currentURL + "api/main", method: "GET"}).then(function(goalData){
-      //   console.log("")
-      //   console.log("URL:" + currentURL + "/api/main")
-      // })
-
-      $.post('/api/goals',moneyObj, function(data){
-        console.log("Here's the results", data);
+      $.get('/api/main', moneyObj, function(data){
+        console.log("Here's the results: ", data);
       });
     });
   }
 
-$(document).ready(function(){
-  attachClickEventHandler();
-});
-
-
-
+  $(document).ready(function(){
+    attachClickEventHandler();
+  });
 </script>
 </body>
 
