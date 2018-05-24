@@ -2,14 +2,13 @@ var mysql = require("mysql");
 var connction;
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-
 }
 else {
  connection = mysql.createConnection({
-
+  port: 3306,
   host: "localhost",
   user: "root",
-  password: "central1889",   ///  <------------------------------- enter password 
+  password: "",   ///  <------------------------------- enter password 
   database: "commodities_db"  // <----------------- check database 
 });
 }
@@ -20,6 +19,5 @@ connection.connect(function(err) {
   }
   console.log("connected as id " + connection.threadId);
 });
-connection.end();
 
 module.exports = connection;

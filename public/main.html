@@ -114,32 +114,47 @@
   <br>   
   <div class="container-fluid">      
       <div class="row">
-        <div class="col-sm-3 col-md-6">
+        <div class="col-sm-6">
         <h2>Investment Form</h2>
         <form>
           <div class="form-group">
-            <label for="email">What's  your capital for investent?:</label>
-            <input type="email" class="form-control" id="email" placeholder="Capital investment">
+            <label for=>What's  your capital for investent?:</label>
+            <input id="capMoney" type="number" class="form-control" id="dollars" placeholder="Capital investment">
           </div>
           <div class="form-group">
-              <label for="pwd">How much would you invest?:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Amount to invest">
-        <h3>Custom Search</h3>
-        <form>
-          <div class="form-group">
-            <label for="email">Daily change percentage:</label>
-            <input type="text" class="form-control" id="daily-change-percentage" placeholder="Daily change percentage">
+            <label for="pwd">How much would you invest?:</label>
+            <input id="investMoney" type="number" class="form-control" id="dollars2" placeholder="Amount to invest">
           </div>
-          <div class="form-group">
-            <label for="pwd">Contract price:</label>
-            <input type="text" class="form-control" id="contract-price" placeholder="Contract price">
-          </div>
-          <div class="form-group">
-              <label for="pwd">Investment strategy:</label>
-              <input type="text" class="form-control" id="investment-strategy" placeholder="Investment strategy">
+          <h3>Custom Search</h3>
+          <form>
+            <div class="form-group">
+              <label for="percentage">Daily change percentage:</label>
+              <input id= "percentChange" type="number" class="form-control" id="daily-change-percentage" placeholder="Daily change percentage">
             </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+            <div class="form-group">
+              <label for="pwd">Contract price:</label>
+              <input id= "contractPrice" type="number" class="form-control" id="contract-price" placeholder="Contract price">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Investment strategy:</label>
+                <input id= "investment" type="text" class="form-control" id="investment-strategy" placeholder="Investment strategy">
+              </div>
+          <button id = "submit" type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div class="col-sm-6">
+      <h2>Investment Advice</h2>
+      <table class='table'>
+          <tr>
+            <th></th>
+            <th>Corn</th>
+            <th>Crude</th>
+            <th>Gas</th>
+            <th>Gold</th>
+            <th>Silver</th>
+            <th>Soy</th>
+          </tr>
+      </table>
     </div>
   </div>
 </div>
@@ -148,6 +163,81 @@
     <br>
     <br clear="all">
  <div class="footer">&copy; Copyright 2018</div>
-  
+ <script
+ src="https://code.jquery.com/jquery-3.3.1.min.js"
+ integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+<script type="text/javascript">
+ // GATHERING USER INPUT
+ function attachClickEventHandler(){
+   var currentURL = window.location.origin;
+   $('#submit').on("click", function(event) {  
+     event.preventDefault();
+     var moneyObj = {
+       inputCapMoney: $('#capMoney').val().trim(),
+       inputInvestMoney: $('#investMoney').val().trim(),
+       inputPercentChange: $('#percentChange').val().trim(),
+       inputContractPrice: $('#contractPrice').val().trim(),
+       inputInvestment: $('#investment').val().trim()
+     };
+      $.get('/api/main', moneyObj, function(data){
+        console.log("Here's the results: ", data);
+        let tr1 = $("<tr>")
+          let td1 = $("<td>").text('BUY AT')
+          let td2 = $("<td>").text('$' + data.corn.Buy_at)
+          let td3 = $("<td>").text('$' + data.crude.Buy_at)
+          let td4 = $("<td>").text('$' + data.gas.Buy_at)
+          let td5 = $("<td>").text('$' + data.gold.buy_at)
+          let td6 = $("<td>").text('$' + data.silver.Buy_at)
+          let td7 = $("<td>").text('$' + data.soy.Buy_at)
+            tr1.append(td1)
+            tr1.append(td2)
+            tr1.append(td3)
+            tr1.append(td4)
+            tr1.append(td5)
+            tr1.append(td6)
+            tr1.append(td7)
+              $(".table").append(tr1)
+         tr1 = $("<tr>")
+           td1 = $("<td>").text('SELL AT')
+           td2 = $("<td>").text('$' + data.corn.Sell_at)
+           td3 = $("<td>").text('$' + data.crude.Sell_at)
+           td4 = $("<td>").text('$' + data.gas.Sell_at)
+           td5 = $("<td>").text('$' + data.gold.sell_at)
+           td6 = $("<td>").text('$' + data.silver.Sell_at)
+           td7 = $("<td>").text('$' + data.soy.Sell_at)
+            tr1.append(td1)
+            tr1.append(td2)
+            tr1.append(td3)
+            tr1.append(td4)
+            tr1.append(td5)
+            tr1.append(td6)
+            tr1.append(td7)
+              $(".table").append(tr1)
+        
+              tr1 = $("<tr>")
+           td1 = $("<td>").text('CURRENT')
+           td2 = $("<td>").text('$' + data.corn.Price)
+           td3 = $("<td>").text('$' + data.crude.Price)
+           td4 = $("<td>").text('$' + data.gas.Price)
+           td5 = $("<td>").text('$' + data.gold.Price)
+           td6 = $("<td>").text('$' + data.silver.Price)
+           td7 = $("<td>").text('$' + data.soy.Price)
+            tr1.append(td1)
+            tr1.append(td2)
+            tr1.append(td3)
+            tr1.append(td4)
+            tr1.append(td5)
+            tr1.append(td6)
+            tr1.append(td7)
+              $(".table").append(tr1)
+        
+      });
+   });
+ }
+ $(document).ready(function(){
+   attachClickEventHandler();
+ });
+</script>
 </body>
 </html>
